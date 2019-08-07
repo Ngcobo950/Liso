@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Test</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="test.css">
+    <style>
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<body style="background-color: lightgrey">
+    <h1>Clothing Catalogue</h1>
+    <nav>
+        <!-- this is my navigation bar wich will direct to home,About,Contacts when you press on it -->
+        <ul>
+            <li><a href="index.html">Home</a> </li>
+            <li><a href="Catalogue2.html">Mens</a></li>
+            <li><a href="About1.html">About</a></li>
+            <li><a href="myTest.html"><i class="fa fa-shopping-cart" style="font-size:36px"></i></a></li>
+        </ul>
+    </nav>
+    <h2 id="cartHeading">Your Cart:</h2>
+    <!--Shopping Cart Contents-->
+    <div id="cartOutput"></div>
+    <!--Shopping Cart Total-->
+    <div id="cartPriceOutput"></div>
+    <!--Order Collection/Delivery Details-->
+    <h3 class="firstBigHeading">Please select your your choice:</h3>
+    <div id="orderOptions" class="radioBtn-box">
+        <!--creating button for delivery-->
+        <input id="collect" type="radio" onclick="showCollectForm()"> Collection (R25.00)</input>
+        <input id="deliver" type="radio" onclick="showDeliverForm()"> Delivery(R200.00)</input>
+    </div>
+    <br>
+    <!--If the user has chosen the collect option, the below div is shown:-->
+    <div id="collectChoice" class="orderText">
+        <p>Please fill out and submit the form :</p>
+        <br>
+        <div class="form-group row">
+            <label for="fullName" class="col-sm-3 col-form-label">First and Last Name</label>
+            <div class="col-sm-3">
+                <input type="text" class="form-control" id="fullName" placeholder="">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="inputEmail" class="col-sm-3 col-form-label">Email</label>
+            <div class="col-sm-3">
+                <input type="email" class="form-control" id="inputEmail" placeholder="">
+            </div>
+        </div>
+        <br>
+        <div style="text-align: left; padding-left: 100px;">
+            <p>Please select the branch you would like to collect your order from:</p>
+            <input type="radio" name="sandton" value="sandton"> Door delivery</input><br>
+            <div class="radioBtn-box"><button type="submit">Submit Branch Collection</button></div>
+            <h3 class="firstBigHeading">Please enter discount voucher:</h3>
+            <div class="radioBtn-box">
+                <input id="coupon" type="text"></input><button id="submit">Apply Coupon</button>
+            </div> <br>
+            <button class="confirmBtn radioBtn-box shadow p-2 btn-dark" type="button" onclick="confirmIt()">Confirm Order</button>
+            <br>
+        </div>
+    </div>
+    </div>
+    </div>
+    <!--Delivery Option section-->
+    <!-- creating the form for deliverythat you have choosen-->
+    <div id="deliverChoice" class="orderText">
+        <p>You have chosen the collection option which costs R200.00 which will be added onto your order</p>
+        <p class="firstBigHeading">Please fill out and submit the form below so that we know where to deliver to:</p>
+        <form id="deliver-form">
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label">First and Last Name</label>
+                <div class="col-sm-2">
+                    <input type="text" class="form-control" id="fullName">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label">Cellphone Number</label>
+                <div class="col-sm-2">
+                    <input type="email" class="form-control" id="cellNumber">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label">Email</label>
+                <div class="col-sm-3">
+                    <input type="email" class="form-control" id="inputEmail">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label">Physical Address</label>
+                <div class="col-sm-6">
+                    <input type="email" class="form-control" id="deliverAddress">
+                    <br><br>
+                    <button class="btn btn-dark shadow p-2 radioBtn-box" id="submit">Submit</button><br>
+                </div>
+            </div>
+        </form>
+        <!--Radio buttons/ payment method Implementation-->
+        <div style="text-align: left; padding-left: 100px;">
+            <button class="confirmBtn radioBtn-box shadow p-2 btn-dark" type="button" onclick="confirmIt()">Confirm Order</button>
+            <br>
+        </div>
+        <!--deliverchoice div close-->
+</body>
+<script type="text/javascript" src="myTest.js"></script>
+
+</html>
+</body>
+
+</html>

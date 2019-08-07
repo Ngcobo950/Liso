@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+<!-- this is the tittle of my page wich is name My profile -->
+    <title>My Profile</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="myStyle2.css">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        h2 , h3, p{
+            color: black;
+        }
+         h3 ,h1{
+          border-style:ridge;
+        }
+        ul{list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: grey;
+}
+
+        li {
+            float: left;
+}
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+          }
+             img{
+        text-align: center;
+        text-decoration: none;}
+    </style>
+</head>
+
+<body style="background-color: lightgrey">
+    <h1>Mapholob's</h1>
+     <nav>
+        <!-- this is my navigation bar wich will direct to home,About,Contacts when you press on it -->
+        <ul>
+            <li><a href="index.html">Home</a> </li>
+            <li><a href="Catalogue2.html">Mens</a></li>
+            <li><a href="About1.html">About</a></li>
+            <li><a href="myTest.html"><i class="fa fa-shopping-cart" style="font-size:36px"></i></a></li>
+        </ul>
+    </nav>
+    <h2 >Mapholob's is a clothing store for mans.It has become one of the leading mens clothing store in South Africa.We sell Tops , trousers and soon we will be selling mans shoes.</h2>
+    <br>
+    <div> <img src="myImages/musa.jpeg" alt="Blazer" id="pl">
+      <button id="hide">Hide</button>
+      <button id="show">Show</button>
+      <button id="button"> Flexy</button>
+    </div>
+    
+
+
+<!-- here is my contact where you will find contact details -->
+<h3>Contacts</h3>
+<p id="Contact"> E-mail:  mapholobs@gmail.com
+  Cell:	+27 218 898 048</p>
+  <ol>
+      <li>Facebook: Mapholobs</li>
+      <br>
+      <li>Whatsapp: 073 254 4879</li>
+  </ol>
+
+  <h3>Customer feedback</h3>
+  <p>Mapholobs is selling a top quality clothes i am a happy customer</p>
+
+  <script>
+    $(document).ready(function(){
+    $('#hide').click(function(){
+      $('img').hide();
+    });
+    $('#show').click(function(){
+      $('img').show();
+    });
+  });
+$(document).ready(function(){
+  $("#button").click(function(){
+    $("#pl").slideUp(2000).slideDown(2000);
+  });
+});
+    
+  </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Fashion For Life</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="myStyle.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <style>
+        button{background-color: lightgrey;
+        }
+        ul{list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: grey;
+}
+ul li{
+    text-decoration: white;
+    color: white;
+}
+
+        li {
+            float: left;
+}
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<!--changing the colour of the background , also create the form-->
+
+<body style="background-color: lightgrey " id="shipping-backg" onload="getCart()">
+    <h1>Fashion For Life</h1>
+    <nav>
+        <!-- this is my navigation bar wich will direct to home,About,Contacts when you press on it -->
+        <ul>
+            <li><a href="index.html">Home</a> </li>
+            <li><a href="Catalogue2.html">Mens</a></li>
+            <li><a href="About1.html">About</a></li>
+            <li><a href="myTest.html"><i class="fa fa-shopping-cart" style="font-size:36px"></i></a></li>
+        </ul>
+    </nav>
+    <br>
+    <form class="form-inline">
+        <label>First name : <br></label>
+        <input type="text" name="firstname">
+        <br>
+        <label>Last name : </label>
+        <br>
+        <input type="text" name="lastname">
+        <br>
+        <input type="radio" name="gender" value="male" checked> Male
+        <br>
+        <input type="radio" name="gender" value="female"> Female
+        <br>
+        <input type="radio" name="gender" value="other"> Other
+        <br>
+        <button type="submit" class="buttn buttn-primary">submit</button>
+    </form>
+    <br>
+    <!--Thumbnail is a way of shaping or style the image -->
+    <!--created the heading tops where everything you wear on top will be under this heading , also added the images.-->
+    <h2>Tops</h2>
+    <div class="container">
+        <div class="row">
+            <div class="col-4">
+                <img src="myImages/vneck.jpg" alt="V-neck jersey" class="img-circle img-responsive">
+                <div>
+                    <button class="buttn buttn-primary buttn-sm" data-toggle="collapse" data-target="#vneck">more</button>
+                    <button class="buttn buttn-primary buttn-sm" id="380" onclick="Cart1()">Cart</button>
+                </div>
+                <div class="collapse" id="vneck">
+                    <ul>
+                        <li>Price = R380</li>
+                        <li>Size = sm , s , m, l</li>
+                        <li>colour = blue , grey , brown and black</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-4">
+                <img src="myImages/africa.jpg" alt="africa" class="img-circle img-responsive">
+                <div>
+                    <button class="buttn buttn-primary buttn-sm" data-toggle="collapse" data-target="#africa">more</button>
+                    <button class="buttn buttn-primary buttn-sm" id="250" onclick="Cart2()">Cart</button>
+                </div>
+                <div class="collapse" id="africa">
+                    <ul>
+                        <li>Price = R250</li>
+                        <li>Size = sm , s , l</li>
+                        <li>colour = blue, red and black</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-4">
+                <img src="myImages/kapi.jpg" alt="kapi" class="img-circle img-responsive">
+                <div>
+                    <button class="buttn buttn-primary buttn-sm" data-toggle="collapse" data-target="#kapi">more</button>
+                    <button class="buttn buttn-primary buttn-sm" id="400" onclick="Cart3()">Cart</button>
+                </div>
+                <div class="collapse" id="kapi">
+                    <ul>
+                        <li>Price = R400</li>
+                        <li>Size = m , l, xl</li>
+                        <li>colour = blue, red , white, brown and black</li>
+                        <ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <!--responsive images means that scaling the picture accordingly and the maximum is 100% on width-->
+    <!--creating heading wich is Trousers wich on it will have everything that you will wear on bottom,adding also the images and machange the pictures into different shapes.-->
+    <h2>Trousers</h2>
+    <div class="container">
+        <div class="row">
+            <div class="col-4">
+                <img src="myImages/formal.jpg" alt="Formal" class="img-circle img-responsive">
+                <div>
+                    <button class="buttn buttn-primary buttn-sm" data-toggle="collapse" data-target="#content">more</button>
+                    <button class="buttn buttn-primary buttn-sm" id="600" onclick="Cart4()">Cart</button>
+                </div>
+                <div class="collapse" id="content">
+                    <ul>
+                        <li>Price = R600</li>
+                        <li>Size = sm,s,m,l</li>
+                        <li>colour = blue , red , white , brown and black</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-4">
+                <h4>Fiasco</h4>
+                <img src="myImages/fiasco.jpg" alt="fiasco" class="img-circle img-responsive">
+                <div>
+                    <button class="buttn buttn-primary buttn-sm" data-toggle="collapse" data-target="#fiasco">more</button>
+                    <button class="buttn buttn-primary buttn-sm" id="560" onclick="Cart5()">Cart</button>
+                </div>
+                <div class="collapse" id="fiasco">
+                    <ul>
+                        <li>Price = R560</li>
+                        <li>Size = sm , m , l</li>
+                        <li>colour = white , brown and black</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-4">
+                <img src="myImages/nice.jpeg" alt="nice" class="img-circle img-responsive">
+                <div>
+                    <button class="buttn buttn-primary buttn-sm" data-toggle="collapse" data-target="#nice">more</button>
+                    <button class="buttn buttn-primary buttn-sm" id="530" onclick="Cart6()">Cart</button>
+                </div>
+                <div class="collapse" id="nice">
+                    <ul>
+                        <li>Price = R530</li>
+                        <li>Size = sm , l</li>
+                        <li>colour = blue , white , brown</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <!--creating the table for the page-->
+    <div class="table-hover">
+        <table class="table">
+            <tr>
+                <th>Number</th>
+                <th>Trouser</th>
+                <th>Tops</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Shorts</td>
+                <td>Shirt</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Jeans</td>
+                <td>Jersey</td>
+            </tr>
+        </table>
+    </div>
+    <!--creating footer wich shows that the page was created by who.-->
+    <footer>
+        <p> &copy; Ngcobo M.&nbsp;&nbsp; All Rights Reserved.&nbsp;&nbsp; Proudly created by Musa Ngcobo</p>
+        <p>Last updated: 15 June 2019</p>
+    </footer>
+    <script type="text/javascript" src="myTest.js"></script>
+</body>
+
+</html>

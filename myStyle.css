@@ -1,0 +1,26 @@
+/*setting the width of the picture and height to be auto*/
+
+img {
+    width: 80%;
+    height: auto;
+}
+
+div img {
+    border-radius: 50%;
+}
+/*creating the border and the radius of it to shape it and then added a shadow*/
+h1 {
+    border: double;
+    border-radius: 15px;
+    box-shadow: 10px 5px 5px grey;
+
+}
+/*c=moving the footer into center and change the colour of it into white*/
+footer {
+    text-align: center;
+    color: white;
+}
+
+ul ,li{
+	text-decoration-color: white;
+}
